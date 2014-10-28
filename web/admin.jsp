@@ -17,6 +17,7 @@
             if(session.getAttribute("perfil").equals("adm")){
                 out.println("<h1>Bem vindo, " + session.getAttribute("nome") + "</h1>");
                 out.println("<a href='cadastrar.jsp'>Novo Usuário</a><br>");
+                out.println("<a href='atualizar.jsp'>Atualizar Base de Dados</a><br>");
                 out.println("<a href='logout.jsp'>Sair do sistema</a>");
                 
             } else {
