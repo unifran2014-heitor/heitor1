@@ -12,14 +12,11 @@
         <link rel="stylesheet" type="text/css" href="estilo.css">
         <title>Cadastrar Usuário</title>
     </head>
-    <body <%out.print("style='background-image: url(imagens/fundo_sistema.jpg)'");%>>
+    <body>
         <%
             //Verifica se está logado
             if (session.getAttribute("perfil").equals("adm")) {
                 out.println("<h1>Bem vindo, " + session.getAttribute("nome") + "</h1>");
-                out.println("<a href='admin.jsp'>Voltar</a><br>");
-                out.println("<a href='logout.jsp'>Sair do sistema</a>");
-
             } else {
                 out.println("Você não está logado no sistema ou não tem permissões para acessar está página. Clique <a href='index.jsp'>aqui</a> para logar-se");
             }
@@ -54,6 +51,8 @@
                 </table>
             </center>
         </form>
+            <a href='admin.jsp'>Voltar</a><br>
+            <a href='logout.jsp'>Sair do sistema</a>
     </body>
 </body>
 </html>

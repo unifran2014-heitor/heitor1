@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="estilo.css">
         <title>Alterar Senha</title>
     </head>
-    <body <%out.print("style='background-image: url(imagens/fundo_sistema.jpg)'");%>>
+    <body>
         <form class="flp" method="post" action="alterarSenha.jsp">
             <center>
             <table>

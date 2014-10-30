@@ -4,7 +4,7 @@
 body {
 	padding-top: 100px;
 	//background: #EDF7ED;
-        background-image: url(imagens/fundo_login.jpg);
+        background-image: url(imagens/fundo_sistema.jpg);
         background-size: 100% auto;
 	font-family: Calibri;
 }
@@ -22,7 +22,7 @@ h2 {
 	font-size: 24px; font-weight: normal;
 	background: #DBF0DB; color: #0099FF;
 	text-align: center; 
-	padding: 20px 0; margin-bottom: 40px;
+	padding: 10px 0; margin-bottom: 20px;
 }
 
 .flp {padding: 0 50px;}

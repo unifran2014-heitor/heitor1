@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="estilo.css">
         <title>Página de Login</title>
     </head>
-    <body>
+    <body <%out.print("style='background-image: url(imagens/fundo_login.jpg)'");%>>
         <form class="flp" method="post" action="login.jsp">
             <center>
                 <table>
