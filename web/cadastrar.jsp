@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
         <title>Cadastrar Usuário</title>
     </head>
     <body>
@@ -24,7 +25,7 @@
                 out.println("Você não está logado no sistema ou não tem permissões para acessar está página. Clique <a href='index.jsp'>aqui</a> para logar-se");
             }
         %>
-        <form method="post" action="gravaUsuario.jsp">
+        <form id="flp "method="post" action="gravaUsuario.jsp">
             <center>
             <table border="1" width="30%" cellpadding="5">
                 <thead>
