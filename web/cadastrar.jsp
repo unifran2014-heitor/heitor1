@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="estilo.css">
         <title>Cadastrar Usuário</title>
     </head>
-    <body>
+    <body <%out.print("style='background-image: url(imagens/fundo_sistema.jpg)'");%>>
         <%
             //Verifica se está logado
             if (session.getAttribute("perfil").equals("adm")) {

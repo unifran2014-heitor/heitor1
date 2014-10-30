@@ -4,7 +4,8 @@
 body {
 	padding-top: 100px;
 	//background: #EDF7ED;
-        background-image: url(imagens/fundo_login_1.jpg);
+        background-image: url(imagens/fundo_login.jpg);
+        background-size: 100% auto;
 	font-family: Calibri;
 }
 main {

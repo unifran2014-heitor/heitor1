@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="estilo.css">
         <title>Alterar Senha</title>
     </head>
-    <body>
+    <body <%out.print("style='background-image: url(imagens/fundo_sistema.jpg)'");%>>
         <form class="flp" method="post" action="alterarSenha.jsp">
             <center>
             <table>
@@ -23,7 +23,7 @@
                         <td><input type="text" name="login" value="" placeholder="Login" /></td>
                     </tr>
                     <tr>
-                        <td><input type="password" name="senha" value="" placeholder="Senha" /></td>
+                        <td><input type="password" name="senha" value="" placeholder="Nova Senha" /></td>
                     </tr>
                     <tr>
                         <td><input type="text" name="cpf" value="" placeholder="CPF"/></td>
