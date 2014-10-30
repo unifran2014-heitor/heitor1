@@ -15,7 +15,7 @@
     <body>
         <form class="flp" method="post" action="login.jsp">
             <center>
-                <table
+                <table>
                     <tr>
                         <td>Login</td>
                     </tr>    

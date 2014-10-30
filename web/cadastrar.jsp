@@ -15,53 +15,45 @@
     <body>
         <%
             //Verifica se está logado
-            if(session.getAttribute("perfil").equals("adm")){
+            if (session.getAttribute("perfil").equals("adm")) {
                 out.println("<h1>Bem vindo, " + session.getAttribute("nome") + "</h1>");
                 out.println("<a href='admin.jsp'>Voltar</a><br>");
                 out.println("<a href='logout.jsp'>Sair do sistema</a>");
-                
-                
+
             } else {
                 out.println("Você não está logado no sistema ou não tem permissões para acessar está página. Clique <a href='index.jsp'>aqui</a> para logar-se");
             }
         %>
-        <form id="flp "method="post" action="gravaUsuario.jsp">
+        <form class="flp" method="post" action="gravaUsuario.jsp">
             <center>
-            <table border="1" width="30%" cellpadding="5">
-                <thead>
-                    <tr>
-                        <th colspan="2">Preencha o formulário</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Nome Completo</td>
-                        <td><input type="text" name="nome" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Login</td>
-                        <td><input type="text" name="login" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Senha</td>
-                        <td><input type="password" name="senha" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Perfil</td>
-                        <td><input type="text" name="perfil" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Cargo</td>
-                        <td><input type="text" name="cargo" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="Salvar" /></td>
-                        <td><input type="reset" value="Limpar" /></td>
-                    </tr>
-                </tbody>
-            </table>
+                <table>
+                        <tr>
+                            <td><h2>Preencha o formulário</h2></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="nome" value="" placeholder="Nome Completo" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="login" value="" placeholder="Login"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="password" name="senha" value="" placeholder="Senha" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="perfil" value="" placeholder="Perfil"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="cargo" value="" placeholder="Cargo" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Salvar" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="reset" value="Limpar" /></td>
+                        </tr>
+                </table>
             </center>
         </form>
     </body>
-    </body>
+</body>
 </html>

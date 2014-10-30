@@ -25,23 +25,30 @@
                 out.println("Você não está logado no sistema ou não tem permissões para acessar está página. Clique <a href='index.jsp'>aqui</a> para logar-se");
             }
         %>
-        <form id="flp" method="post" action="atualizarBase.jsp">
+        <form class="flp" method="post" action="atualizarBase.jsp">
             <center>
-            <table border="1" width="30%" cellpadding="3">
-                <thead>
+            <table>
                     <tr>
-                        <th colspan="2">Atualizar Base de Dados</th>
+                        <td><h2>Atualizar Base de Dados</h2></td>
                     </tr>
-                </thead>
-                <tbody>
                     <tr>
                         <td>Atualizar Base de Clientes</td>
+                    </tr>
+                    <tr>
                         <td><input type="file" name="listadeClientes" /></td>
                     </tr>
-                    <!--<tr>
-                        <td>Atualizar Base de Estoque</td>
-                        <td><input type="file" name="listadeEstoque" /></td>
-                    </tr>-->
+                    <tr>
+                        <td>Atualizar Base de Vendas</td>
+                    </tr>
+                    <tr>
+                        <td><input type="file" name="listadeVendas" /></td>
+                    </tr>
+                    <tr>
+                        <td>Atualizar Base de Comodatos</td>
+                    </tr>
+                    <tr>
+                        <td><input type="file" name="listadeComodatos" /></td>
+                    </tr>
                     <tr>
                         <td><input type="submit" value="Atualizar" /></td>
                     </tr>

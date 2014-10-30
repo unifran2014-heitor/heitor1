@@ -9,35 +9,31 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
         <title>Alterar Senha</title>
     </head>
     <body>
-        <form method="post" action="alterarSenha.jsp">
+        <form class="flp" method="post" action="alterarSenha.jsp">
             <center>
-            <table border="1" width="30%" cellpadding="3">
-                <thead>
+            <table>
                     <tr>
-                        <th colspan="2">Alterar Senha</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Login</td>
-                        <td><input type="text" name="login" value="" /></td>
+                        <td><h2>Alterar Senha</h2></td>
                     </tr>
                     <tr>
-                        <td>Senha</td>
-                        <td><input type="password" name="senha" value="" /></td>
+                        <td><input type="text" name="login" value="" placeholder="Login" /></td>
                     </tr>
                     <tr>
-                        <td>CPF</td>
-                        <td><input type="text" name="cpf" value="" /></td>
+                        <td><input type="password" name="senha" value="" placeholder="Senha" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="cpf" value="" placeholder="CPF"/></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="Alterar" /></td>
+                    </tr>
+                    <tr>
                         <td><input type="reset" value="Limpar" /></td>
                     </tr>
-                </tbody>
             </table>
             </center>
         </form>
