@@ -37,7 +37,12 @@
                             <td><input type="password" name="senha" value="" placeholder="Senha" /></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="perfil" value="" placeholder="Perfil"/></td>
+                            <td><input list="perfil" name="perfil">
+                            <datalist id="perfil">
+                                <option value="Supervisor">
+                                <option value="Marketing">                                
+                            </datalist> 
+                            </td>
                         </tr>
                         <tr>
                             <td><input type="text" name="cargo" value="" placeholder="Cargo" /></td>

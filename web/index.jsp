@@ -17,6 +17,9 @@
             <center>
                 <table>
                     <tr>
+                        <td><h2>Autenticação</h2></td>
+                    </tr>
+                    <tr>
                         <td>Login</td>
                     </tr>    
                     <tr>
