@@ -13,14 +13,33 @@
         <title>Cadastrar Usuário</title>
     </head>
     <body>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Solicitações</a></li>
+                <li><a href="#">Montar Carga</a></li>
+                <li><a href='atualizar.jsp'>Atualizar Base</a>
+                    <ul>
+                        <li><a href="#">Atualizar Clientes</a></li>
+                        <li><a href="#">Atualizar Vendas</a></li>
+                        <li><a href="#">Atualizar Comodatos</a></li>                    
+                    </ul>
+                </li>
+                <li><a href='cadastrar.jsp'>Cadastrar</a></li>
+                <li><a href="#">Alterar Senha</a></li>                
+            </ul>
+        </nav>
         <%
             //Verifica se está logado
             if (session.getAttribute("perfil").equals("adm")) {
                 out.println("<h1>Bem vindo, " + session.getAttribute("nome") + "</h1>");
             } else {
-                out.println("Você não está logado no sistema ou não tem permissões para acessar está página. Clique <a href='index.jsp'>aqui</a> para logar-se");
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Acesso Negado');");
+                out.println("history.back();");
+                out.println("</script>");
             }
         %>
+        <a href='logout.jsp'>Sair</a>
         <form class="flp" method="post" action="gravaUsuario.jsp">
             <center>
                 <table>
@@ -37,7 +56,7 @@
                             <td><input type="password" name="senha" value="" placeholder="Senha" /></td>
                         </tr>
                         <tr>
-                            <td><input list="perfil" name="perfil">
+                            <td><input list="perfil" name="perfil" type="text">
                             <datalist id="perfil">
                                 <option value="Supervisor">
                                 <option value="Marketing">                                
@@ -56,8 +75,6 @@
                 </table>
             </center>
         </form>
-            <a href='admin.jsp'>Voltar</a><br>
-            <a href='logout.jsp'>Sair do sistema</a>
     </body>
 </body>
 </html>

@@ -13,14 +13,31 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Solicitações</a></li>
+                <li><a href="#">Montar Carga</a></li>
+                <li><a href='atualizar.jsp'>Atualizar Base</a>
+                    <ul>
+                        <li><a href="#">Atualizar Clientes</a></li>
+                        <li><a href="#">Atualizar Vendas</a></li>
+                        <li><a href="#">Atualizar Comodatos</a></li>                    
+                    </ul>
+                </li>
+                <li><a href="#">Alterar Senha</a></li>                
+            </ul>
+        </nav>
         <%
-            //Verifica se está logado
-            if(session.getAttribute("perfil").equals("usr")){
-                out.println("<h1>Bem vindo, " + session.getAttribute("nome") + "</h1>");
-            } else {
-                out.println("Você não está logado no sistema ou não tem permissões para acessar está página. Clique <a href='index.jsp'>aqui</a> para logar-se");
-            }
+                //Verifica se está logado
+                if (session.getAttribute("perfil").equals("usr")) {
+                    out.println("<h1>Bem vindo, " + session.getAttribute("nome") + "</h1>");
+                } else {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("alert('Acesso Negado');");
+                    out.println("</script>");
+                    response.sendRedirect("index.jsp");
+                }
         %>
-        <a href='logout.jsp'>Sair do sistema</a>
+        <a href='logout.jsp'>Sair</a>
     </body>
 </html>

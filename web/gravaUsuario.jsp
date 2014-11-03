@@ -7,21 +7,15 @@
     String login = request.getParameter("login");    
     String senha = request.getParameter("senha");
     String nome = request.getParameter("nome");
-    String perfil = request.getParameter("perfil");
+    String perfil = request.getParameter("perfil");  
     
-  %>  
-    <script language="javascript">
-            
-      alert("O que há aqui " + perfil.value);
-      </script>
-  
-  <%
-    if (perfil == "Supervisor"){
+    if (perfil.equals("Supervisor")){
         perfil = "adm";
     }
-    else {
+    else if (perfil.equals("Marketing")){
         perfil = "usr";
-    }
+        
+    }    
     String cargo = request.getParameter("cargo");
     Class.forName("com.mysql.jdbc.Driver");
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/heitor1",
