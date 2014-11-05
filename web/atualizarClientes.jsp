@@ -1,6 +1,6 @@
 <%-- 
-    Document   : admin
-    Created on : 26/10/2014, 19:41:47
+    Document   : atualizar
+    Created on : 28/10/2014, 20:03:05
     Author     : FELIPE
 --%>
 
@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="estilo.css">
-        <title>Página do Administrador</title>
+        <title>Atualizar Base de Clientes</title>
     </head>
     <body>
         <nav>
@@ -40,5 +40,24 @@
             }
         %>
         <a href='logout.jsp'>Sair</a>
+        <form class="flp" enctype="multipart/form-data" method="post" action="atualizarBaseClientes.jsp">
+            <center>
+                <table>
+                    <tr>
+                        <td><h2>Atualizar Base de Clientes</h2></td>
+                    </tr>
+                    <tr>
+                        <td>Atualizar Base de Clientes</td>
+                    </tr>
+                    <tr>
+                        <td><input type="file" name="listadeClientes" /></td>
+                    </tr>                   
+                    <tr>
+                        <td><input type="submit" value="Atualizar" /></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </center>
+        </form>
     </body>
 </html>

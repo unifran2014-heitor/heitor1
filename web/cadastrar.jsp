@@ -17,15 +17,15 @@
             <ul class="menu">
                 <li><a href="#">Solicitações</a></li>
                 <li><a href="#">Montar Carga</a></li>
-                <li><a href='atualizar.jsp'>Atualizar Base</a>
+                <li><a href="#">Atualizar Base</a>
                     <ul>
-                        <li><a href="#">Atualizar Clientes</a></li>
-                        <li><a href="#">Atualizar Vendas</a></li>
-                        <li><a href="#">Atualizar Comodatos</a></li>                    
+                        <li><a href='atualizarClientes.jsp'>Atualizar Clientes</a></li>
+                        <li><a href='atualizarVendas.jsp'>Atualizar Vendas</a></li>
+                        <li><a href='atualizarComodatos.jsp'>Atualizar Comodatos</a></li>                    
                     </ul>
                 </li>
                 <li><a href='cadastrar.jsp'>Cadastrar</a></li>
-                <li><a href="#">Alterar Senha</a></li>                
+                <li><a href='alterar.jsp'>Alterar Senha</a></li>                
             </ul>
         </nav>
         <%
@@ -56,7 +56,7 @@
                             <td><input type="password" name="senha" value="" placeholder="Senha" /></td>
                         </tr>
                         <tr>
-                            <td><input list="perfil" name="perfil" type="text">
+                            <td><input list="perfil" name="perfil" type="text" placeholder="Perfil">
                             <datalist id="perfil">
                                 <option value="Supervisor">
                                 <option value="Marketing">                                

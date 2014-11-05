@@ -17,15 +17,15 @@
             <ul class="menu">
                 <li><a href="#">Solicitações</a></li>
                 <li><a href="#">Montar Carga</a></li>
-                <li><a href='atualizar.jsp'>Atualizar Base</a>
+                <li><a href="#">Atualizar Base</a>
                     <ul>
-                        <li><a href="#">Atualizar Clientes</a></li>
-                        <li><a href="#">Atualizar Vendas</a></li>
-                        <li><a href="#">Atualizar Comodatos</a></li>                    
+                        <li><a href='atualizarClientes.jsp'>Atualizar Clientes</a></li>
+                        <li><a href='atualizarVendas.jsp'>Atualizar Vendas</a></li>
+                        <li><a href='atualizarComodatos.jsp'>Atualizar Comodatos</a></li>                    
                     </ul>
                 </li>
                 <li><a href='cadastrar.jsp'>Cadastrar</a></li>
-                <li><a href="#">Alterar Senha</a></li>                
+                <li><a href='alterar.jsp'>Alterar Senha</a></li>                
             </ul>
         </nav>
         <%
@@ -40,30 +40,18 @@
             }
         %>
         <a href='logout.jsp'>Sair</a>
-        <form class="flp" method="post" action="atualizarBase.jsp">
+        <form class="flp" enctype="multipart/form-data" method="post" action="atualizarBaseVendas.jsp">
             <center>
                 <table>
                     <tr>
-                        <td><h2>Atualizar Base de Dados</h2></td>
-                    </tr>
-                    <tr>
-                        <td>Atualizar Base de Clientes</td>
-                    </tr>
-                    <tr>
-                        <td><input type="file" name="listadeClientes" /></td>
+                        <td><h2>Atualizar Base de Vendas</h2></td>
                     </tr>
                     <tr>
                         <td>Atualizar Base de Vendas</td>
                     </tr>
                     <tr>
                         <td><input type="file" name="listadeVendas" /></td>
-                    </tr>
-                    <tr>
-                        <td>Atualizar Base de Comodatos</td>
-                    </tr>
-                    <tr>
-                        <td><input type="file" name="listadeComodatos" /></td>
-                    </tr>
+                    </tr>                    
                     <tr>
                         <td><input type="submit" value="Atualizar" /></td>
                     </tr>

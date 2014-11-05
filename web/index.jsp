@@ -14,7 +14,7 @@
     </head>
     <body <%out.print("style='background-image: url(imagens/logo_sistema.png), url(imagens/fundo_login.jpg)'");
             out.print("style='background-size: 15%, 100% auto;'");
-            out.print("style='background-position: center'");
+            out.print("style='background-position: right, right;'");
             out.print("style='background-repeat: no-repeat'");%>>
         <form class="flp" method="post" action="login.jsp">
             <center>
