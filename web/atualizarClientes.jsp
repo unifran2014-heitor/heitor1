@@ -40,7 +40,10 @@
             }
         %>
         <a href='logout.jsp'>Sair</a>
-        <form class="flp" enctype="multipart/form-data" method="post" action="atualizarBaseClientes.jsp">
+        <form class="flp" enctype="multipart/form-data" method="post" action="http://localhost/updateClientes.php">
+            
+       
+            
             <center>
                 <table>
                     <tr>
@@ -50,10 +53,10 @@
                         <td>Atualizar Base de Clientes</td>
                     </tr>
                     <tr>
-                        <td><input type="file" name="listadeClientes" /></td>
+                        <td><input type="file" name="filename" /></td>
                     </tr>                   
                     <tr>
-                        <td><input type="submit" value="Atualizar" /></td>
+                        <td><input type="submit" name='submit' value="Atualizar" /></td>
                     </tr>
                     </tbody>
                 </table>
