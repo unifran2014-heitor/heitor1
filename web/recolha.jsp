@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="estilo.css">
-        <title>Cadastrar Usuário</title>
+        <title>Solicitação de Recolha</title>
     </head>
     <body>
         <nav>
@@ -20,7 +20,7 @@
                         <li><a href='entrega.jsp'>Solicitar Entrega</a></li>
                         <li><a href='recolha.jsp'>Solicitar Recolha</a></li>                   
                     </ul>
-                </li>  
+                </li>                
                 <li><a href="#">Montar Carga</a></li>
                 <li><a href="#">Atualizar Base</a>
                     <ul>
@@ -45,42 +45,31 @@
             }
         %>
         <a href='logout.jsp'>Sair</a>
-        <form class="flp" method="post" action="gravaUsuario.jsp">
-            <center>
+
+        <form class="flp3" method="post" action="gravaEntrega.jsp">
                 <table>
-                        <tr>
-                            <td><h2>Preencha o formulário</h2></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="nome" value="" placeholder="Nome Completo" /></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="cpf" value="" placeholder="CPF" /></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="login" value="" placeholder="Login"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="password" name="senha" value="" placeholder="Senha" /></td>
-                        </tr>
-                        <tr>
-                            <td><input list="perfil" name="perfil" type="text" placeholder="Perfil">
-                            <datalist id="perfil">
-                                <option value="Supervisor">
-                                <option value="Marketing">    
-                                <option value="Vendedor">  
-                            </datalist> 
-                            </td>
-                        </tr>                       
-                        <tr>
-                            <td><input type="submit" value="Salvar" /></td>
-                        </tr>
-                        <tr>
-                            <td><input type="reset" value="Limpar" /></td>
-                        </tr>
+                    <tr>
+                        <td colspan="7"><h2>Solicitação de Recolha</h2></td>
+                    </tr>
+                    <tr>
+                        <td>Cliente</td>
+                        <td>Setor</td>
+                        <td>Cidade</td>
+                        <td>Material</td>
+                        <td>Quantidade</td>
+                        <td></td>
+                        <td></td>
+                    </tr>   
+                    <tr>
+                        <td><input type="text" name="cliente" value="" placeholder="Cliente" /> </td>                              
+                        <td><input type="text" name="setor" value="" placeholder="Setor"/></td>
+                        <td><input type="text" name="cidade" value="" placeholder="Cidade" /></td>
+                        <td><input type="text" name="material" placeholder="Material"> </td>
+                        <td><input type="text" name="quantidade" value="" placeholder="Quantidade" /> </td>           
+                        <td><input type="submit" value="Consultar" /></td>
+                        <td><input type="reset" value="Limpar" /></td>
                 </table>
-            </center>
         </form>
+       
     </body>
-</body>
 </html>

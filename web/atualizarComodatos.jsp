@@ -15,7 +15,12 @@
     <body>
         <nav>
             <ul class="menu">
-                <li><a href="#">Solicitações</a></li>
+                <li><a href="#">Solicitações</a>
+                    <ul>
+                        <li><a href='entrega.jsp'>Solicitar Entrega</a></li>
+                        <li><a href='recolha.jsp'>Solicitar Recolha</a></li>                   
+                    </ul>
+                </li>  
                 <li><a href="#">Montar Carga</a></li>
                 <li><a href="#">Atualizar Base</a>
                     <ul>

@@ -4,7 +4,7 @@
 body {
 	padding-top: 100px;
 	//background: #EDF7ED;
-        background-image: url(imagens/logo_sistema.png), url(imagens/fundo_sistema.jpg);
+        background-image: url(imagens/logo_sistema.png), url(imagens/fundo_sistema.png);
         background-size: 15%, 100% auto;
         background-repeat: no-repeat;
 	font-family: Calibri;
@@ -101,6 +101,55 @@ h2 {
 	padding: 10px 8px;
 	border-color: transparent; color: #666;
 	cursor: text;
+}
+
+/*label styles*/
+.ch {
+	display: block; float: left;
+	position: relative; /*for upward animation*/
+	background: white; 
+}
+.ch:first-child {padding-left: 2px;}
+.ch:last-child {padding-right: 2px;}
+
+/*active input label*/
+.focussed {
+	/*when any input is already focussed clicking on it(label) again won't do anything*/
+	pointer-events: none;
+}
+
+.flp3 {padding: 0 50px;}
+/*Let's place the label over the input*/
+.flp3 div {position: relative; margin-bottom: 20px;}
+
+.flp3 input, .flp3 label {
+	width: 175px; display: block;
+	font: inherit; font-size: 16px; line-height: 24px;
+	/*fixed height for FF line height issue. 
+	height = 24(lineheight) + 10*2(padding) + 2(border)*/
+	height: 25px;
+	border: 1px solid #999;
+}
+.flp3 table {
+	width: 200px; 
+        display: block;
+	font: inherit; 
+        font-size: 16px; 
+        line-height: 24px;
+	/*fixed height for FF line height issue. 
+	height = 24(lineheight) + 10*2(padding) + 2(border)*/
+	height: 25px;
+	border: 0px;
+}
+
+.flp3 input {padding: 10px; outline: none; border-radius: 3px;}
+.flp3 label {
+	position: absolute; left: 0; top: 0;
+	/*left/right padding will be 2px less, adjusted by padding on .ch*/
+	padding: 5px;
+	border-color: transparent; color: #666;
+	cursor: text;
+        outline: none; border-radius: 3px
 }
 
 /*label styles*/
