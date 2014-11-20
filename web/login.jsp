@@ -6,13 +6,13 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import ="java.sql.*" %>
+
 <%
     String login = request.getParameter("login");    
     String senha = request.getParameter("senha");
     
     Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/heitor1",
-            "root", "");
+    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/heitor2", "root", "");
     Statement st = con.createStatement();
     ResultSet rs;
     rs = st.executeQuery("select * from usuario where login='" + login + "' and senha='" + senha + "'");
@@ -20,12 +20,13 @@
         session.setAttribute("nome", rs.getString("nome"));
         session.setAttribute("perfil", rs.getString("perfil"));
         session.setAttribute("login", rs.getString("login"));
-        session.setAttribute("cargo", rs.getString("cargo"));
+        session.getCreationTime();
+        //session.setMaxInactiveInterval(600);                
         
-        if (session.getAttribute("perfil").equals("adm")) { 
+        if (session.getAttribute("perfil").equals("mkt")) { 
             response.sendRedirect("admin.jsp");
         }
-        else if (session.getAttribute("perfil").equals("usr")){  
+        else if (session.getAttribute("perfil").equals("sup")){  
             response.sendRedirect("user.jsp");
         } 
         else {

@@ -35,7 +35,7 @@
         </nav>
         <%
             //Verifica se está logado
-            if (session.getAttribute("perfil").equals("adm")) {
+            if (session.getAttribute("perfil").equals("mkt")) {
                 out.println("<h1>Bem vindo, " + session.getAttribute("nome") + "</h1>");
             } else {
                 out.println("<script type=\"text/javascript\">");
@@ -46,9 +46,6 @@
         %>
         <a href='logout.jsp'>Sair</a>
         <form class="flp" enctype="multipart/form-data" method="post" action="http://localhost/updateClientes.php">
-            
-       
-            
             <center>
                 <table>
                     <tr>

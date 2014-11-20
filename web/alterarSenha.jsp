@@ -5,7 +5,7 @@
     String senha = request.getParameter("senha");
     
     Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/heitor1",
+    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/heitor2",
             "root", "");
     Statement st = con.createStatement();
     //ResultSet rs;

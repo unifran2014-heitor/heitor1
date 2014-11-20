@@ -8,7 +8,6 @@
     <%
         session.setAttribute("login", null);
         session.setAttribute("nome", null);
-        session.setAttribute("cargo", null);
         session.setAttribute("perfil", null);        
         session.invalidate();
         response.sendRedirect("index.jsp");

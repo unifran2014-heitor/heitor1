@@ -67,8 +67,7 @@
                             <td><input list="perfil" name="perfil" type="text" placeholder="Perfil">
                             <datalist id="perfil">
                                 <option value="Supervisor">
-                                <option value="Marketing">    
-                                <option value="Vendedor">  
+                                <option value="Marketing">                                  
                             </datalist> 
                             </td>
                         </tr>                       

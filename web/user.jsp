@@ -1,6 +1,6 @@
 <%-- 
-    Document   : user
-    Created on : 26/10/2014, 19:41:55
+    Document   : admin
+    Created on : 26/10/2014, 19:41:47
     Author     : FELIPE
 --%>
 
@@ -10,38 +10,25 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="estilo.css">
-        <title>JSP Page</title>
+        <title>Home - Supervisor</title>
     </head>
     <body>
         <nav>
-            <ul class="menu">
-                <li><a href="#">Solicitações</a>
-                    <ul>
-                        <li><a href='entrega.jsp'>Solicitar Entrega</a></li>
-                        <li><a href='recolha.jsp'>Solicitar Recolha</a></li>                   
-                    </ul>
-                </li>  
-                <li><a href="#">Montar Carga</a></li>
-                <li><a href="#">Atualizar Base</a>
-                    <ul>
-                        <li><a href='atualizarClientes.jsp'>Atualizar Clientes</a></li>
-                        <li><a href='atualizarVendas.jsp'>Atualizar Vendas</a></li>
-                        <li><a href='atualizarComodatos.jsp'>Atualizar Comodatos</a></li>                    
-                    </ul>
-                </li>
+            <ul class="menu">                
+                <li><a href="visualiza.jsp#">Visualiza Cargas</a></li>
                 <li><a href='alterar.jsp'>Alterar Senha</a></li>                
             </ul>
         </nav>
         <%
-                //Verifica se está logado
-                if (session.getAttribute("perfil").equals("usr")) {
-                    out.println("<h1>Bem vindo, " + session.getAttribute("nome") + "</h1>");
-                } else {
-                    out.println("<script type=\"text/javascript\">");
-                    out.println("alert('Acesso Negado');");
-                    out.println("</script>");
-                    response.sendRedirect("index.jsp");
-                }
+            //Verifica se está logado
+            if (session.getAttribute("perfil").equals("sup")) {
+                out.println("<h1>Bem vindo, " + session.getAttribute("nome") + "</h1>");
+            } else {
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Acesso Negado');");
+                out.println("history.back();");
+                out.println("</script>");
+            }
         %>
         <a href='logout.jsp'>Sair</a>
     </body>

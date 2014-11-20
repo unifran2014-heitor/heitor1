@@ -36,7 +36,7 @@
         </nav>
         <%
             //Verifica se está logado
-            if (session.getAttribute("perfil").equals("adm")) {
+            if (session.getAttribute("perfil").equals("mkt")) {
                 out.println("<h1>Bem vindo, " + session.getAttribute("nome") + "</h1>");
             } else {
                 out.println("<script type=\"text/javascript\">");
