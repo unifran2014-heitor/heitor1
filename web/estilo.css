@@ -27,6 +27,7 @@ h2 {
 	padding: 10px 0; margin-bottom: 20px;
 }
 
+
 .menu{
     list-style:none; 
     border:0px solid #030001; 
@@ -131,6 +132,7 @@ h2 {
 	border: 1px solid #999;
 }
 .flp3 table {
+        margin-left: 15%;
 	width: 200px; 
         display: block;
 	font: inherit; 
@@ -142,7 +144,7 @@ h2 {
 	border: 0px;
 }
 
-.flp3 input {padding: 10px; outline: none; border-radius: 3px;}
+.flp3 input button {padding: 1px; outline: none; border-radius: 3px;}
 .flp3 label {
 	position: absolute; left: 0; top: 0;
 	/*left/right padding will be 2px less, adjusted by padding on .ch*/
@@ -165,4 +167,18 @@ h2 {
 .focussed {
 	/*when any input is already focussed clicking on it(label) again won't do anything*/
 	pointer-events: none;
+}
+
+.recolha table{
+    margin-top: 20%;
+    margin-left: 15%;
+    width: auto;
+}
+.recolha table tr{
+    height: 30px;
+   
+}
+.recolha table td{
+    height: 100px;
+    width: 75px;
 }
