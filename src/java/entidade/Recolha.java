@@ -42,10 +42,6 @@ public class Recolha {
     @Column(name = "data_recolha")
     @Temporal(TemporalType.TIMESTAMP)
     private Date data_recolha;
-
-    @ManyToOne
-    @JoinColumn(name = "usuario")
-    private Usuario usuario;
     
     @ManyToOne
     @JoinColumn(name = "cliente")
@@ -54,9 +50,7 @@ public class Recolha {
     @ManyToOne
     @JoinColumn(name = "carga")
     private Carga carga;
-    
-    @OneToMany(mappedBy = "recolha")
-    private List<Comodato> lstComodato;
+
 
     public Integer getId() {
         return id;
@@ -82,14 +76,6 @@ public class Recolha {
         this.data_recolha = data_recolha;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
     public Cliente getCliente() {
         return cliente;
     }
@@ -105,15 +91,7 @@ public class Recolha {
     public void setCarga(Carga carga) {
         this.carga = carga;
     }
-
-    public List<Comodato> getLstComodato() {
-        return lstComodato;
-    }
-
-    public void setLstComodato(List<Comodato> lstComodato) {
-        this.lstComodato = lstComodato;
-    }
-
+    
    
     
     

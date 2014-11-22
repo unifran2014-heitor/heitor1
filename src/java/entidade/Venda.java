@@ -36,22 +36,14 @@ public class Venda {
     @Column(name = "id")
     private Integer id;
     
-    @Column(name = "data_venda")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date data_venda;
-
+    @Column(name = "cliente")
+    private Integer cliente;
+    
+    @Column(name = "cod_produto")
+    private Integer cod_produto;
+    
     @Column(name = "quantidade")
     private Integer quantidade;
-    
-    @ManyToOne
-    @JoinColumn(name = "usuario")
-    private Usuario usuario;
-    
-    @OneToMany(mappedBy = "venda")
-    private List<Comodato> lstComodato;
-    
-    @OneToMany(mappedBy = "venda")
-    private List<Cliente> lstCliente;
 
     public Integer getId() {
         return id;
@@ -61,12 +53,20 @@ public class Venda {
         this.id = id;
     }
 
-    public Date getData_venda() {
-        return data_venda;
+    public Integer getCliente() {
+        return cliente;
     }
 
-    public void setData_venda(Date data_venda) {
-        this.data_venda = data_venda;
+    public void setCliente(Integer cliente) {
+        this.cliente = cliente;
+    }
+
+    public Integer getCod_produto() {
+        return cod_produto;
+    }
+
+    public void setCod_produto(Integer cod_produto) {
+        this.cod_produto = cod_produto;
     }
 
     public Integer getQuantidade() {
@@ -76,29 +76,6 @@ public class Venda {
     public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
     }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public List<Comodato> getLstComodato() {
-        return lstComodato;
-    }
-
-    public void setLstComodato(List<Comodato> lstComodato) {
-        this.lstComodato = lstComodato;
-    }
-
-    public List<Cliente> getLstCliente() {
-        return lstCliente;
-    }
-
-    public void setLstCliente(List<Cliente> lstCliente) {
-        this.lstCliente = lstCliente;
-    }
+    
 
    }

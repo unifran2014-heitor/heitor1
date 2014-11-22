@@ -36,18 +36,6 @@ public class Usuario {
     @Column(name = "perfil")
     private String perfil;
 
-    @OneToMany(mappedBy = "usuario")
-    private List<Recolha> lstRecolha;
-
-    @OneToMany(mappedBy = "usuario")
-    private List<Entrega> lstEntrega;
-    
-    @OneToMany(mappedBy = "usuario")
-    private List<Carga> lstCarga;
-    
-    @OneToMany(mappedBy = "usuario")
-    private List<Cliente> lstCliente;
-
     public Integer getId() {
         return id;
     }
@@ -72,7 +60,14 @@ public class Usuario {
         this.cpf = cpf;
     }
 
-    
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
     public String getSenha() {
         return senha;
     }
@@ -89,45 +84,4 @@ public class Usuario {
         this.perfil = perfil;
     }
 
-    public List<Recolha> getLstRecolha() {
-        return lstRecolha;
-    }
-
-    public void setLstRecolha(List<Recolha> lstRecolha) {
-        this.lstRecolha = lstRecolha;
-    }
-
-    public List<Entrega> getLstEntrega() {
-        return lstEntrega;
-    }
-
-    public void setLstEntrega(List<Entrega> lstEntrega) {
-        this.lstEntrega = lstEntrega;
-    }
-
-    public List<Carga> getLstCarga() {
-        return lstCarga;
-    }
-
-    public void setLstCarga(List<Carga> lstCarga) {
-        this.lstCarga = lstCarga;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public List<Cliente> getLstCliente() {
-        return lstCliente;
-    }
-
-    public void setLstCliente(List<Cliente> lstCliente) {
-        this.lstCliente = lstCliente;
-    }
-    
-    
 }

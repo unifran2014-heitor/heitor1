@@ -42,10 +42,6 @@ public class Carga {
     @Column(name = "data_carga")
     @Temporal(TemporalType.TIMESTAMP)
     private Date data_carga;
-
-    @ManyToOne
-    @JoinColumn(name = "usuario")
-    private Usuario usuario;
     
     @OneToMany(mappedBy = "carga")
     private List<Recolha> lstRecolha;
@@ -77,14 +73,6 @@ public class Carga {
         this.data_carga = data_carga;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
     public List<Recolha> getLstRecolha() {
         return lstRecolha;
     }
@@ -102,4 +90,5 @@ public class Carga {
     }
     
     
-   }
+
+}

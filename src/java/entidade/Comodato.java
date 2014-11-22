@@ -36,20 +36,20 @@ public class Comodato {
     @Column(name = "id")
     private Integer id;
     
-    @Column(name = "codigo")
-    private Integer codigo;
+    @Column(name = "cod_cliente")
+    private Integer cod_cliente;
     
-    @Column(name = "setor")
-    private String status;
+    @Column(name = "cod_produto")
+    private Integer cod_produto;
 
     @Column(name = "nro_comodato")
-    private Integer nro_comodato; 
+    private String nro_comodato; 
+    
+     @Column(name = "serie_comodato")
+    private String serie_comodato; 
      
     @Column(name = "serie")
     private String serie;
-    
-    @Column(name = "produto")
-    private String produto;
     
     @Column(name = "descricao")
     private String descricao;
@@ -57,17 +57,13 @@ public class Comodato {
     @Column(name = "quantidade")
     private Integer quantidade;     
 
-    @ManyToOne
-    @JoinColumn(name = "recolha")
-    private Recolha recolha;
+    //@ManyToOne
+    //@JoinColumn(name = "recolha")
+    //private Recolha recolha;
     
-    @ManyToOne
-    @JoinColumn(name = "entrega")
-    private Entrega entrega;
-    
-    @ManyToOne
-    @JoinColumn(name = "venda")
-    private Venda venda;
+    //@ManyToOne
+    //@JoinColumn(name = "entrega")
+    //private Entrega entrega;
 
     public Integer getId() {
         return id;
@@ -77,28 +73,36 @@ public class Comodato {
         this.id = id;
     }
 
-    public Integer getCodigo() {
-        return codigo;
+    public Integer getCod_cliente() {
+        return cod_cliente;
     }
 
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
+    public void setCod_cliente(Integer cod_cliente) {
+        this.cod_cliente = cod_cliente;
     }
 
-    public String getStatus() {
-        return status;
+    public Integer getCod_produto() {
+        return cod_produto;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setCod_produto(Integer cod_produto) {
+        this.cod_produto = cod_produto;
     }
 
-    public Integer getNro_comodato() {
+    public String getNro_comodato() {
         return nro_comodato;
     }
 
-    public void setNro_comodato(Integer nro_comodato) {
+    public void setNro_comodato(String nro_comodato) {
         this.nro_comodato = nro_comodato;
+    }
+
+    public String getSerie_comodato() {
+        return serie_comodato;
+    }
+
+    public void setSerie_comodato(String serie_comodato) {
+        this.serie_comodato = serie_comodato;
     }
 
     public String getSerie() {
@@ -107,14 +111,6 @@ public class Comodato {
 
     public void setSerie(String serie) {
         this.serie = serie;
-    }
-
-    public String getProduto() {
-        return produto;
-    }
-
-    public void setProduto(String produto) {
-        this.produto = produto;
     }
 
     public String getDescricao() {
@@ -133,7 +129,7 @@ public class Comodato {
         this.quantidade = quantidade;
     }
 
-    public Recolha getRecolha() {
+    /*public Recolha getRecolha() {
         return recolha;
     }
 
@@ -149,13 +145,6 @@ public class Comodato {
         this.entrega = entrega;
     }
 
-    public Venda getVenda() {
-        return venda;
-    }
-
-    public void setVenda(Venda venda) {
-        this.venda = venda;
-    }
-
+*/
     
    }

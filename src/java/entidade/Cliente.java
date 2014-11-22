@@ -32,13 +32,8 @@ public class Cliente {
     @Column(name = "cidade")
     private String cidade;
     
-    @ManyToOne
-    @JoinColumn(name = "usuario")
-    private Usuario usuario;
-    
-    @ManyToOne
-    @JoinColumn(name = "venda")
-    private Venda venda;
+     @Column(name = "setor")
+    private Integer setor;
     
     @OneToMany(mappedBy = "cliente")
     private List<Recolha> lstRecolha;
@@ -78,20 +73,12 @@ public class Cliente {
         this.cidade = cidade;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public Integer getSetor() {
+        return setor;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public Venda getVenda() {
-        return venda;
-    }
-
-    public void setVenda(Venda venda) {
-        this.venda = venda;
+    public void setSetor(Integer setor) {
+        this.setor = setor;
     }
 
     public List<Recolha> getLstRecolha() {
@@ -109,7 +96,8 @@ public class Cliente {
     public void setLstEntrega(List<Entrega> lstEntrega) {
         this.lstEntrega = lstEntrega;
     }
-    
+
+   
 
     
 }

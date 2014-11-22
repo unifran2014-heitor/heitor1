@@ -42,10 +42,6 @@ public class Entrega {
     @Column(name = "data_entrega")
     @Temporal(TemporalType.TIMESTAMP)
     private Date data_entrega;
-
-    @ManyToOne
-    @JoinColumn(name = "usuario")
-    private Usuario usuario;
     
     @ManyToOne
     @JoinColumn(name = "cliente")
@@ -55,8 +51,9 @@ public class Entrega {
     @JoinColumn(name = "carga")
     private Carga carga;
     
-    @OneToMany(mappedBy = "entrega")
-    private List<Comodato> lstComodato;
+    @Column(name = "quantidade")
+    private Integer quantidade;
+    
 
     public Integer getId() {
         return id;
@@ -82,14 +79,6 @@ public class Entrega {
         this.data_entrega = data_entrega;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
     public Cliente getCliente() {
         return cliente;
     }
@@ -106,13 +95,14 @@ public class Entrega {
         this.carga = carga;
     }
 
-    public List<Comodato> getLstComodato() {
-        return lstComodato;
+    public Integer getQuantidade() {
+        return quantidade;
     }
 
-    public void setLstComodato(List<Comodato> lstComodato) {
-        this.lstComodato = lstComodato;
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
     }
 
+   
     
    }
