@@ -40,8 +40,7 @@ public class Entrega {
     private String status;
 
     @Column(name = "data_entrega")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date data_entrega;
+    private String data_entrega;
     
     @ManyToOne
     @JoinColumn(name = "cliente")
@@ -73,13 +72,7 @@ public class Entrega {
         this.status = status;
     }
 
-    public Date getData_entrega() {
-        return data_entrega;
-    }
 
-    public void setData_entrega(Date data_entrega) {
-        this.data_entrega = data_entrega;
-    }
 
     public Cliente getCliente() {
         return cliente;
@@ -111,6 +104,14 @@ public class Entrega {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getData_entrega() {
+        return data_entrega;
+    }
+
+    public void setData_entrega(String data_entrega) {
+        this.data_entrega = data_entrega;
     }
 
    

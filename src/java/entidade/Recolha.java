@@ -40,8 +40,7 @@ public class Recolha {
     private String status;
 
     @Column(name = "data_recolha")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date data_recolha;
+    private String data_recolha;
     
     @ManyToOne
     @JoinColumn(name = "cliente")
@@ -68,13 +67,7 @@ public class Recolha {
         this.status = status;
     }
 
-    public Date getData_recolha() {
-        return data_recolha;
-    }
-
-    public void setData_recolha(Date data_recolha) {
-        this.data_recolha = data_recolha;
-    }
+    
 
     public Cliente getCliente() {
         return cliente;
@@ -90,6 +83,14 @@ public class Recolha {
 
     public void setCarga(Carga carga) {
         this.carga = carga;
+    }
+
+    public String getData_recolha() {
+        return data_recolha;
+    }
+
+    public void setData_recolha(String data_recolha) {
+        this.data_recolha = data_recolha;
     }
     
    
