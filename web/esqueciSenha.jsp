@@ -8,10 +8,23 @@
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/heitor2",
             "root", "");
     Statement st = con.createStatement();
-    //ResultSet rs;
-    int i = st.executeUpdate("update usuario set senha = " + senha + "  where  login = ('"+ login + "')");
+    ResultSet rs;
+    int res = 0;
     
-    response.sendRedirect("index.jsp");
+    res = st.executeUpdate("update usuario set senha = " + senha + "  where  login = ('"+ login + "') and cpf = ('"+ cpf + "')");
+         
+    if (res == 1) {
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('Senha alterada com sucesso');");
+            out.println("history.back();");
+            out.println("</script>");
+            response.sendRedirect("index.jsp");
+    } else {
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('Falha ao alterar a senha, verifique login/cpf');");
+            out.println("history.back();");
+            out.println("</script>");
+    }
     
             
 %>

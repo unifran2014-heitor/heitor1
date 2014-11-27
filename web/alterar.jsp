@@ -13,20 +13,20 @@
         <title>Alterar Senha</title>
     </head>
     <body>
-        <form class="flp" method="post" action="esqueciSenha.jsp">
+        <form class="flp" method="post" action="alterarSenha.jsp">
             <center>
             <table>
                     <tr>
                         <td><h2>Alterar Senha</h2></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="login" value="" placeholder="Login" /></td>
+                        <td><input type="text" name="login" value="" placeholder="Login" maxlength="15" required/></td>
                     </tr>
                     <tr>
-                        <td><input type="password" name="senhaatual" value="" placeholder="Senha atual" /></td>
+                        <td><input type="password" name="senhaatual" value="" placeholder="Senha atual" maxlength="10" required /></td>
                     </tr>
                     <tr>
-                        <td><input type="password" name="senha" value="" placeholder="Nova senha" /></td>
+                        <td><input type="password" name="novasenha" value="" placeholder="Nova senha" maxlength="10" required/></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="Alterar" /></td>

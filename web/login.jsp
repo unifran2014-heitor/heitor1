@@ -15,12 +15,12 @@
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/heitor2", "root", "");
     Statement st = con.createStatement();
     ResultSet rs;
-    rs = st.executeQuery("select * from usuario where login='" + login + "' and senha='" + senha + "'");
+    rs = st.executeQuery("select * from usuario where login='" + login + "' and senha='" + senha + "'"); 
     if (rs.next()) {
         session.setAttribute("nome", rs.getString("nome"));
         session.setAttribute("perfil", rs.getString("perfil"));
         session.setAttribute("login", rs.getString("login"));
-        session.getCreationTime();
+        //session.getCreationTime();
         //session.setMaxInactiveInterval(600);                
         
         if (session.getAttribute("perfil").equals("mkt")) { 
@@ -29,10 +29,13 @@
         else if (session.getAttribute("perfil").equals("sup")){  
             response.sendRedirect("user.jsp");
         } 
-        else {
-        out.println("Usuário ou senha inválidos <a href='index.jsp'>Tente novamente</a>");
-    }
         
     }
-        
+       if(!rs.next()){
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('Acesso Negado');");
+            out.println("history.back();");
+            out.println("</script>");
+    }
+
 %>

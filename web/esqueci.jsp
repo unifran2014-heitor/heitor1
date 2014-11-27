@@ -20,13 +20,13 @@
                         <td><h2>Esqueci Senha</h2></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="login" value="" placeholder="Login" /></td>
+                        <td><input type="text" name="login" value="" placeholder="Login" maxlength="15" required/></td>
                     </tr>
                     <tr>
-                        <td><input type="password" name="senha" value="" placeholder="Nova Senha" /></td>
+                        <td><input type="password" name="senha" value="" placeholder="Nova Senha" maxlength="10" required /></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="cpf" value="" placeholder="CPF"/></td>
+                        <td><input type="text" name="cpf" value="" placeholder="CPF" maxlength="14" required/></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="Alterar" /></td>

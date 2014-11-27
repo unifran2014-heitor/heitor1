@@ -52,19 +52,19 @@
                             <td><h2>Preencha o formulário</h2></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="nome" value="" placeholder="Nome Completo" /></td>
+                            <td><input type="text" name="nome" value="" placeholder="Nome Completo" maxlength="50" required/></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="cpf" value="" placeholder="CPF" /></td>
+                            <td><input type="text" name="cpf" value="" placeholder="CPF" maxlength="14" required/></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="login" value="" placeholder="Login"/></td>
+                            <td><input type="text" name="login" value="" placeholder="Login" maxlength="15" required/></td>
                         </tr>
                         <tr>
-                            <td><input type="password" name="senha" value="" placeholder="Senha" /></td>
+                            <td><input type="password" name="senha" value="" placeholder="Senha" maxlength="10" required/></td>
                         </tr>
                         <tr>
-                            <td><input list="perfil" name="perfil" type="text" placeholder="Perfil">
+                            <td><input list="perfil" name="perfil" type="text" placeholder="Perfil" required>
                             <datalist id="perfil">
                                 <option value="Supervisor">
                                 <option value="Marketing">                                  

@@ -26,13 +26,13 @@
                         <td>Login</td>
                     </tr>    
                     <tr>
-                        <td><input type="text" name="login" value="" /></td>
+                        <td><input type="text" name="login" value="" maxlength="15" required/></td>
                     </tr>
                      <tr>
                         <td>Senha</td>
                     </tr>  
                     <tr>
-                        <td><input type="password" name="senha" value="" /></td>
+                        <td><input type="password" name="senha" value="" maxlength="15" required/></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="Entrar" /></td>
