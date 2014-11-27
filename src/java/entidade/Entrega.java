@@ -54,6 +54,8 @@ public class Entrega {
     @Column(name = "quantidade")
     private Integer quantidade;
     
+    @Column(name = "descricao")
+    private String descricao;
 
     public Integer getId() {
         return id;
@@ -101,6 +103,14 @@ public class Entrega {
 
     public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
    
